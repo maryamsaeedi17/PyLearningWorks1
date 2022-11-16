@@ -58,35 +58,35 @@ elif op=="sqrt":
         print(r)
 
 elif op=="sin":
-    d=float(input("Please enter your angle:"))
+    d=float(input("Please enter your angle in degree:"))
     R=(d/180)*math.pi
     r=math.sin(R)
 
     print(r)
 
 elif op=="cos":
-    d=float(input("Please enter your angle:"))
+    d=float(input("Please enter your angle in degree:"))
     R=d/180*math.pi
     r=math.cos(R)
 
     print(r)
 
 elif op=="tan":
-    d=float(input("Please enter your angle:"))
+    d=float(input("Please enter your angle in degree:"))
     R=d/180*math.pi
     r=math.tan(R)
 
     print(r)
 
 elif op=="cot":
-    d=float(input("Please enter your angle:"))
+    d=float(input("Please enter your angle in degree:"))
     R=d/180*math.pi
     r=1/math.tan(R)
 
     print(r)
 
 elif op=="fact":
-    a=int(input("Please enter your number:"))
+    a=int(input("Please enter your integer number:"))
     r=math.factorial(a)
 
     print(r)
