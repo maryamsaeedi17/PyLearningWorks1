@@ -12,3 +12,4 @@ for file_name in file_list:
 imageio.mimsave("my_first_gif.gif",IMAGES,duration=0.4)
 
 
+
