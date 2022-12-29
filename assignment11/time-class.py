@@ -26,16 +26,17 @@ class Time:
         result = (self.hour * 60 + self.min) * 60 + self.sec
         return result
     
-    def sec_to_time(self):
-        hour = self.sec//3600
-        min = (self.sec - hour * 3600) // 60
-        sec = (self.sec - hour * 3600) - min * 60
+    @staticmethod
+    def sec_to_time(second):
+        hour = second // 3600
+        min = (second - hour * 3600) // 60
+        sec = (second - hour * 3600) - min * 60
         result = Time(hour, min, sec)
         return result
         
-    def GMT_to_IRAN(self):
-        IRAN_time = Time(3, 30, 0)
-        result = Time.sum(self, IRAN_time)
+    def gmt_to_tehran(self):
+        tehran_time = Time(3, 30, 0)
+        result = self.sum(tehran_time)
         return result
 
     def fix(self):
@@ -90,13 +91,14 @@ s1.show()
 s2=t1.sub(t2)
 s2.show()
 
-sec=t1.time_to_sec
+sec=t1.time_to_sec()
 print(sec)
 
 s=3665
-t=Time(0,0,s)
-t.show()
+#t=Time(0,0,s)
+#t.show()
+Time.sec_to_time(s)
 
-G=Time(0,0,0)
-I=G.GMT_to_IRAN()
+G=Time(1,20,0)
+I=G.gmt_to_tehran()
 I.show()
