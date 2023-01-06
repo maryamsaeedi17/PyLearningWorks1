@@ -1,0 +1,10 @@
+film,fight club,David Fincher,8.8,https://www.youtube.com/watch?v=qtRKdVHc-cE,2:27,Brad Pitt|Edward Norton|Meat Loaf,1999,1,---
+film,million dollar baby,Clint Eastwood, 8.1,https://www.youtube.com/watch?v=5_RsHRmIRBY, 2:25,Hilary Swank|Clint Eastwood|Morgan Freeman,2004,1,---
+film,It's a wonderful life,Frank Capra,8.6,https://www.youtube.com/watch?v=iLR3gZrU2Xo, 1:15,James Stewart|Donna Reed|Lionel Barrymore,1946,1,---
+film,Inception,Christopher Nolan,8.8,https://www.youtube.com/watch?v=YoHD9XEInc0, 2:23,Leonardo DiCaprio|Joseph Gordon-Levitt|Elliot Page,2010,1,---
+series,The Peripheral,Michael Roskam,8.1,https://www.youtube.com/watch?v=aH1FOkJys3Y,2:28,Taron Egerton|Paul Walter|Hauser Greg Kinnear|Sepideh Moafi,2021,8,---
+series,When Calls the Heart,Michael Landon,8.0,https://www.youtube.com/watch?v=I5xC3MMhIis,1:00,Erin Krakow|Martin Cummins|Pascale Hutton,2014,95,---
+documentary,The Territory,Alex Pritz,7.6,https://www.youtube.com/watch?v=wL9wvdbk7A4, 2:26,Neidinha Bandeira|Bitaté Uru|Eu Wau Wau,2022,1,---
+documentary,Three Identical Strangers,Tim Wardle,7.6,https://www.youtube.com/watch?v=4GeD3tDrRDQ, 2:09,Robert Shafran|Michael Domnitz|Howard Schneider,2018,1,---
+clip,The Stepford Wives,Frank Oz,5.3,https://www.youtube.com/watch?v=SuAADocdVn0,2:30,Nicole Kidman|Bette Midler|Matthew Broderick,2004,1,comedy
+
