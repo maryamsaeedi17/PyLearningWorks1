@@ -45,12 +45,13 @@ def menu():
     print("1-Add")
     print("2-Edit")
     print("3-Remove")
-    print("4-Search/Advanced Search")
-    print("5-Show list")
-    print("6-Show a media's info")
-    print("5-Download")
-    print("8-Save changes")
-    print("9-Exit") 
+    print("4-Search")
+    print("5-Advanced Search")
+    print("6-Show list")
+    print("7-Show a media's info")
+    print("8-Download")
+    print("9-Save changes")
+    print("10-Exit") 
     print()
 
 
@@ -85,16 +86,13 @@ def edit():
     for i in range(len(MEDIA)):
         if MEDIA[i].name==name:    
             x=i
-            print("which field do you want to edit? \n 1-type \n 2-director \n 3-url")
+            print("which field do you want to edit? \n 1-director \n 2-url")
             ch=int(input("Enter your choice:"))
             new_data=input("Please enter the new data:")
             if ch==1:
-                MEDIA[x].type=new_data
-                print("Successfully edited!")
-            elif ch==2:
                 MEDIA[x].director=new_data
                 print("Successfully edited!")
-            elif ch==3:
+            elif ch==2:
                 MEDIA[x].url=new_data
                 print("Successfully edited!")
             else:
@@ -118,12 +116,25 @@ def remove():
 
 def search():
     user_input=input("Type your keyword:")
-    for product in MEDIA:
-        if product["code"]==user_input or product["name"]==user_input:
-            print(product["code"], "\t\t", product["name"],"\t\t",product["price"])
+    for media in MEDIA:
+        if media.name==user_input or media.director==user_input:
+            print(media.type, "\t\t", media.name, "\t\t", media.director,"\t\t",media.imdb_score, "\t\t" , media.url , "\t\t", media.casts , "\t\t", media.productionyear)
             break
     else:
         print("Not found!")
+
+
+def advanced_search():
+    i=int(input("Enter minimum time(in second): "))
+    e=int(input("Enter maximum time(in second): "))
+    n=0
+    for media in MEDIA:
+        if i<=int(media.duration)<=e:
+            media.showinfo()
+            n+=1
+    if n==0:
+        print("Not found any media with duration beetwin" , i , "and" ,e , "seconds!")
+
 
 
 def show_list():
@@ -157,21 +168,23 @@ while True:
     elif choice==4:
         search()
     elif choice==5:
-        show_list()
+        advanced_search()    
     elif choice==6:
+        show_list()
+    elif choice==7:
         na=input("\n Pleas enter media's name: ")
         for m in MEDIA:
             if m.name==na:
                 m.showinfo()
 
-    elif choice==7:
+    elif choice==8:
         na=input("\n Pleas enter media's name: ")
         for m in MEDIA:
             if m.name==na:
                 m.download()
-    elif choice==8:
-        write_to_database()
     elif choice==9:
+        write_to_database()
+    elif choice==10:
         write_to_database()
         exit(0)
     else:
